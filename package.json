@@ -5,6 +5,9 @@
   "repository": "git@github.com:washingtonsoares/myfavorites-api.git",
   "author": "Washington Soares <washingtonudi@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "express": "^4.16.2",
     "open-graph-scraper": "^3.1.4"
