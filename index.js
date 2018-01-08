@@ -3,7 +3,7 @@ const app = express()
 const getOpenGraphData = require('./utils')
 
 app.get('/', (req, res)  => {
-  const url = 'https://github.com/washingtonsoares/myfavorites-ui'
+  const url = req.query.url
 
   getOpenGraphData(url, response => res.send(response))
 })
