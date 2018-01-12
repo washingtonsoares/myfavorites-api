@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const getOpenGraphData = require('./utils')
+const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res)  => {
   const url = req.query.url
@@ -8,6 +9,4 @@ app.get('/', (req, res)  => {
   getOpenGraphData(url, response => res.send(response))
 })
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
