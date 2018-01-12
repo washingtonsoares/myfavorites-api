@@ -4,7 +4,7 @@ const getOpenGraphData = require('./utils')
 const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res)  => {
-  const url = req.query.url
+  const { url } = req.query
 
   getOpenGraphData(url, response => {
     console.log(`LOG: ${url}` )
